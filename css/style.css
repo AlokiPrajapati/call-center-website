@@ -9,7 +9,7 @@
 :root {
   --primary-color: #e80566;
   --secondery-color: #1c2e7b;
-  --font-color: #b7b7b7;
+  --font-color: #707070;
   --font2-color: #060606;
   --servies-section-color: #f9f9f9;
   --gradient-color: linear-gradient(75deg, #1c2e7b 10%, #e80566);
@@ -503,11 +503,18 @@ p {
   }
 @media screen and (max-width: 768px) {
   .Testimonials-section-main {
-    gap: 1rem;
+    /* gap: 1rem; */
     grid-template-columns: repeat(1, 1fr);
   }
   .Testimonials-footer {
     margin: 3rem 0;
+  }
+  .Testimonials-section-box {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 1rem 1rem; */
   }
 }
 /* Testimonials-section end */
@@ -612,6 +619,15 @@ p {
     .col-3 {
       transform: translateX(50%);
     }
+  }
+  @media screen and (min-width:992px) {
+    .blog-section-main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .col-3 {
+      transform: none;
+    }
 }
 /* blog end */
 /* footer section start */
@@ -682,6 +698,10 @@ p {
 }
 /* media start */
 @media screen and (max-width: 576px) {
+  .contect-bg-color {
+    background-color:var(--media576-bg-color);
+    color: white;
+  }
   .contect-section .contect-header {
     flex-direction: column;
     justify-content: center; 
